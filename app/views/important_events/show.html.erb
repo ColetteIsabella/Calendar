@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @important_event.event %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @important_event.date %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @important_event.details %>
+</p>
+
+
+<%= link_to 'Edit', edit_important_event_path(@important_event) %> |
+<%= link_to 'Back', important_events_path %>
+<%= link_to 'New Important event', new_important_event_path %>

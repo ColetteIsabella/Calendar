@@ -1,0 +1,27 @@
+<h1>Listing important_events</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Date</th>
+    <th>Details</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @important_events.each do |important_event| %>
+  <tr>
+    <td><%= important_event.event %></td>
+    <td><%= important_event.date %></td>
+    <td><%= important_event.details %></td>
+    <td><%= link_to 'Show', important_event %></td>
+    <td><%= link_to 'Edit', edit_important_event_path(important_event) %></td>
+    <td><%= link_to 'Destroy', important_event, method: :delete, data: { confirm: "Are you sure you want to delete this, and you're not being lazy?" } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Important event', new_important_event_path %>
