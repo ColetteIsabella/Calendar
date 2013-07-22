@@ -1,4 +1,5 @@
 CalendarTracker::Application.routes.draw do
+  root :to => "important_events#index"
   resources :important_events
 
 
